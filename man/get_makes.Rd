@@ -11,7 +11,8 @@ get_makes(key = getOption("edmunds_api_key"))
            otherwise the default package key will be used}
 }
 \value{
-A character vector of car makes
+A data frame of car makes, with additional columns 'nice_name'
+   and 'make_id' to use in other function calls
 }
 \description{
 get a list of all car makes

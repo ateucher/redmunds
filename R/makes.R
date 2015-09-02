@@ -3,7 +3,8 @@
 #' @param key API key. If you have your own you can supply it, 
 #'            otherwise the default package key will be used
 #'
-#' @return A character vector of car makes
+#' @return A data frame of car makes, with additional columns 'nice_name'
+#'    and 'make_id' to use in other function calls
 #' @export
 get_makes <- function(key = getOption("edmunds_api_key")) {
   req <- makes_GET(make = 'makes', key = key)
@@ -21,7 +22,13 @@ makes_path <- function(make) {
 }
 
 extract_makes <- function(makes_list) {
-  vapply(makes_list$makes, function(x) x$name, FUN.VALUE = character(1))
+  rows <- lapply(makes_list$makes, function(x) {
+    make = x$name 
+    nice_name = x$niceName
+    make_id = x$id
+    data.frame(make, nice_name, make_id, stringsAsFactors = FALSE)
+  })
+  do.call('rbind', rows)
 }
 
 

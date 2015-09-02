@@ -4,10 +4,6 @@
   }
 }
 
-base_url <- function() 'https://api.edmunds.com/'
-
-vehicle_path <- function() 'api/vehicle/v2/'
-
 edmunds_GET <- function(path, ..., key) {
   q <- list(..., fmt = "json", api_key = key)
   req <- GET(base_url(), path = path, query = q)
@@ -27,4 +23,6 @@ edmunds_parse <- function(req) {
   jsonlite::fromJSON(text, simplifyVector = FALSE)
 }
 
+base_url <- function() 'https://api.edmunds.com/'
 
+vehicle_path <- function() 'api/vehicle/v2/'
