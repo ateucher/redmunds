@@ -1,8 +1,8 @@
 Package: redmunds
-Title: What the Package Does (one line, title case)
+Title: Get Vehicle Data From Edmunds Online Car Database
 Version: 0.0.0.9000
 Authors@R: 'Andy Teucher <andy.teucher@gmail.com> [aut, cre]'
-Description: What the package does (one paragraph)
+Description: Get Vehicle Data From Edmunds Online Car Database
 Depends: R (>= 3.2.2)
 License: MIT + file LICENSE
 Imports: httr,
