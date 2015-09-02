@@ -1,0 +1,10 @@
+Package: redmunds
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: 'Andy Teucher <andy.teucher@gmail.com> [aut, cre]'
+Description: What the package does (one paragraph)
+Depends: R (>= 3.2.2)
+License: MIT + file LICENSE
+Imports: httr,
+         jsonlite
+LazyData: true
