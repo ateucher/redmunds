@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 # redmunds
 
-An R package to get vehicle data from [Edumunds](www.edmunds.com).
+An R package to get vehicle data from [Edumunds](http://www.edmunds.com/).
 
 ## Installation
 
@@ -24,6 +24,15 @@ An R package to get vehicle data from [Edumunds](www.edmunds.com).
 # install.packages("devtools") # if not already installed
 devtools::install_github("ateucher/redmunds")
 ```
+
+## Usage
+So far there is one simple working function: `get_makes()`, which returns a data frame of car makes available to query against.
+
+```{r}
+library("redmunds")
+get_makes()
+```
+
 
 ## Status
 In development
