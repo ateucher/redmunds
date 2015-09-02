@@ -1,23 +1,33 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-redmunds
-========
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# redmunds
 
 An R package to get vehicle data from [Edumunds](www.edmunds.com).
 
-Installation
-------------
+## Installation
 
-``` r
+```{r eval=FALSE}
 # install.packages("devtools") # if not already installed
 devtools::install_github("ateucher/redmunds")
 ```
 
-Status
-------
-
+## Status
 In development
 
-License
--------
+## License
 
 [MIT](LICENSE)
