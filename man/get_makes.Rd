@@ -4,7 +4,11 @@
 \alias{get_makes}
 \title{get a list of all car makes}
 \usage{
-get_makes()
+get_makes(key = getOption("edmunds_api_key"))
+}
+\arguments{
+\item{key}{API key. If you have your own you can supply it,
+           otherwise the default package key will be used}
 }
 \value{
 A character vector of car makes

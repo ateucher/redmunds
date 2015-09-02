@@ -8,9 +8,7 @@ base_url <- function() 'https://api.edmunds.com/'
 
 vehicle_path <- function() 'api/vehicle/v2/'
 
-edmunds_key <- function() getOption("edmunds_api_key")
-
-edmunds_GET <- function(path, ..., key = edmunds_key()) {
+edmunds_GET <- function(path, ..., key) {
   q <- list(..., fmt = "json", api_key = key)
   req <- GET(base_url(), path = path, query = q)
   edmunds_check(req)
